@@ -386,6 +386,27 @@
         .fa-heart-o {
             color: #f44336;
         }
+        
+        /* Buttons */
+.hero-btn, .btn1, .btn2 {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover, .btn1:hover, .btn2:hover {
+    background: #f44336;
+    border-color: #f44336;
+}
+
+ 
     </style>
 </head>
 <body>
@@ -399,18 +420,19 @@
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#course">COURSE</a></li>
                     <li><a href="#blog">BLOG</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="text-box">
-            <h1>Skills Development Program</h1>
-            <p>It is never too late to get educated or learn new skills.<br>
-            Join our Empowering the Nation Educational and Skills Development Program today.
-            </p>
-            <a href="#contact" class="hero-btn">Visit Us To Know More</a>   
+            <h1>Welcome to Empowering the Nation</h1>
+            <h3>Skills Training for Domestic Workers & Gardeners</h3>
+            <p>Providing marketable skills to hundreds of domestic workers and gardeners on both 6 months and 6 weeks programs.</p>  
+            <button class="btn1" id="6-weeks"> 6 Weeks Courses</button>
+            <button class="btn2" id="6-months"> 6 Months Courses</button>
+             <a href="#contact" class="hero-btn">Visit Us To Know More</a> 
         </div>
     </section>
 
@@ -426,12 +448,7 @@
                    designed to be completed just in 6 weeks. These programs are perfect for career starters 
                    or those looking to enhance specific skills.</p>
             </div>
-            <div class="course-col">
-                <h3>3 Months</h3>
-                <p>We offer accredited degree programs in partnership with leading universities. 
-                   Our degrees combine theoretical knowledge with practical application to prepare 
-                   students for successful careers in their chosen fields.</p>
-            </div>
+            
             <div class="course-col">
                 <h3>6 Months</h3>
                 <p>Our 6 months programs are designed for non-professionals seeking to advance their 
