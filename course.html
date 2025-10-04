@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+    
+    <style>
+        /* Basic CSS reset */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        /* Header and navigation styles */
+        .Sub-header {
+            min-height: 50vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('https://placehold.co/1500x800/1e3a8a/white?text=University+Banner');
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            color: white;
+            padding: 2% 5%;
+        }
+        
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav img {
+            width: 150px;
+        }
+        
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+        
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+        
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile menu styles */
+        .fa {
+            display: none;
+        }
+        
+        @media(max-width: 700px) {
+            .nav-links ul li {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                background: #f44336;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;
+                transition: 1s;
+            }
+            
+            .fa {
+                display: block;
+                color: #fff;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+            }
+            
+            .nav-links ul {
+                padding: 30px;
+            }
+        }
+        
+        /* Section headings */
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        p {
+            color: #777;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        /* Course section */
+        .course {
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .course-col {
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            transition: 0.5s;
+        }
+        
+        .course-col:hover {
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        }
+        
+        /* About section */
+        .about-us {
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .about-col {
+            flex-basis: 48%;
+            padding: 30px 2px;
+        }
+        
+        .about-col img {
+            width: 100%;
+        }
+        
+        .red-btn {
+            border: 1px solid #f44336;
+            background: transparent;
+            color: #f44336;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        .hero-btn:hover {
+            border: 1px solid #f44336;
+            background: #f44336;
+            transition: 1s;
+        }
+        
+        /* Facilities section */
+        .facilities {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .facilities-col {
+            flex-basis: 31%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+        }
+        
+        .facilities-col img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .facilities-col p {
+            padding: 0;
+            text-align: left;
+        }
+        
+        .facilities-col h3 {
+            margin-top: 16px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        
+        /* Footer */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        .icons .fa {
+            color: #f44336;
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+            display: inline-block;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+</head>
+<body>
+<section class="Sub-header">
+    <nav>
+        <a href="index.html"><img src="images/logo.jpg" alt="Home Page"></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="course.html">COURSE</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1>Our Courses</h1>
+</section>
+    
+<!----- Course ----->
+    
+<section class="Our-Course">
+    <h1>Our Six Weeks Courses</h1>
+    <p>This is where you write the Courses you Offer.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Child Minding</h3>
+            <img src="images/child minding.jpg" alt="Child Minding">
+            <p> To Provide basic child and baby care</p>
+        </div>
+        <div class="course-col">
+            <h3>Cooking</h3>
+            <img src="images/cooking.jpg" alt="Cooking">
+            <p> To prepare and cook nutrients and family meals</p>
+        </div>
+        <div class="course-col">
+            <h3>Gardening</h3>
+            <img src="images/gardening.jpg" alt="Gardening">
+            <p>To provide basic knowledge of watering, pruning and planting in a domestic garden</p>
+        </div>
+    </div>    
+</section>
+        
+<!----- about us content ----->    
+
+<section class="about-us">
+    <div class="row">
+       <div class="about-col">
+           <h1>We are the world's largest university</h1>
+           <p>This university was built by the worlds top engineers. With over 50,000 students across our global campuses, we provide world-class education in various disciplines. Our faculty includes Nobel laureates, industry experts, and renowned researchers who are committed to excellence in teaching and innovation.</p>
+           <a href="" class="hero-btn red-btn">EXPLORE</a>
+        </div>
+        <div class="about-col">
+            <img src="images/Big University.jpg" alt="Big University"> 
+        </div>
+     </div>
+</section>
+
+<!----- facilities ----->
+    
+<section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>This is where you write about your global campuses</p>
+
+    <div class="row">
+         <div class="facilities-col">
+            <img src="images/lab.jpg">
+            <h3>Learn from reputable Doctors</h3>
+            <p>World class facilities and outstanding academic achievements separates Jupiter Farms. Our medical program features state-of-the-art simulation labs and partnerships with leading hospitals.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="images/kitchen.jpg">
+            <h3>World Class Kitchen</h3>
+            <p>Our culinary arts program features professional-grade kitchens, award-winning chef instructors, and partnerships with Michelin-starred restaurants around the world.</p>
+        </div>
+         <div class="facilities-col">
+            <img src="images/Landscaping.jpg2.jpg">
+            <h3>Landscaping</h3>
+            <p>Our horticulture and landscape architecture programs feature expansive gardens, greenhouses, and outdoor classrooms set across our 500-acre main campus.</p>
+        </div>
+    </div>
+</section>
+
+<!---- Footer ---->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Founded in 1920, Jupiter University is dedicated to excellence in teaching, learning, and research,<br>and to developing leaders who make a difference globally.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart"></i> by Group8 University</p>
+</section>
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+    
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    
+    function hideMenu(){
+        navLinks.style.right = "-200px"; 
+    }
+</script>
+
+</body>    
+</html>
